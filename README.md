@@ -1,16 +1,5 @@
-# portfoliodev
+MY PORTFOLIO
 
-A new Flutter project.
+Here is my portfolio describing my projects done so far , my personal contact information while you can connect with me through different social media handles. It enlists my skills that I have induced in different prokects. It also describes my working experience . I always update my portfolio with new projects , working experience and skills . Here are some screenshots :
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![image](https://github.com/user-attachments/assets/eebe3ea2-7b90-45e4-9d3c-0dcddc224989)
