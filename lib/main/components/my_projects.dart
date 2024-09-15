@@ -14,9 +14,14 @@ class MyProjects extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          "My Projects",
-          style: Theme.of(context).textTheme.headline6,
+        Padding(
+          padding: const EdgeInsets.only(top:40),
+          child: Center(
+            child: Text(
+              "My Projects",
+              style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 40)
+            ),
+          ),
         ),
         SizedBox(
           height: defaultPadding,
@@ -46,7 +51,7 @@ class ProjectGridView extends StatelessWidget{
     return GridView.builder(
       shrinkWrap: true,
       physics: NeverScrollableScrollPhysics(),
-      itemCount: 3,
+      itemCount: 5,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         childAspectRatio: childAspectRatio,
         crossAxisCount: crossAxisCount,

@@ -20,22 +20,17 @@ class ProjectCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(project.title!,
-              maxLines: 2,
-              overflow: TextOverflow.ellipsis,
-              style: Theme.of(context).textTheme.subtitle2),
+              // maxLines: 2,
+              // overflow: TextOverflow.ellipsis,
+              style: Theme.of(context).textTheme.titleMedium),
           SizedBox(
             height: defaultPadding,
           ),
-          Expanded(
-            child: SingleChildScrollView(
-              scrollDirection: Axis.vertical,
-              child: Text(
-                project.description!,
-                maxLines: Responsive.isMobileLarge(context)? 3: 4,
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(height: 1.5),
-              ),
-            ),
+          Text(
+            project.description!,
+            // maxLines: Responsive.isMobileLarge(context)? 3: 4,
+            // overflow: TextOverflow.ellipsis,
+            style: TextStyle(height: 1.5),
           ),
           Spacer(),
           SizedBox(

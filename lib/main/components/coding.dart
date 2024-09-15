@@ -16,14 +16,14 @@ class Coding extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: defaultPadding),
           child: Text(
             "Coding",
-            style: Theme.of(context).textTheme.subtitle2,
+            style: Theme.of(context).textTheme.titleSmall,
           ),
         ),
-        AnimatedLinearProgressIndicator(percentage: 0.6, label: "Dart"),
+        AnimatedLinearProgressIndicator(percentage: 0.8, label: "Dart"),
         AnimatedLinearProgressIndicator(percentage: 0.9, label: "C++"),
         AnimatedLinearProgressIndicator(percentage: 0.7, label: "CSS"),
         AnimatedLinearProgressIndicator(percentage: 0.8, label: "Python"),
-        AnimatedLinearProgressIndicator(percentage: 0.5, label: "Javascript"),
+        AnimatedLinearProgressIndicator(percentage: 0.3, label: "Django"),
       ],
     );
   }

@@ -6,6 +6,8 @@ import 'package:portfoliodev/main/components/my_info.dart';
 import 'package:portfoliodev/components/animated_progress.dart';
 import 'package:portfoliodev/main/components/side_menu.dart';
 import 'package:cupertino_icons/cupertino_icons.dart';
+import 'webview.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class SideMenu extends StatelessWidget {
   SideMenu({
@@ -14,6 +16,27 @@ class SideMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Future<void> launchUrlSiteBrowser({
+      required String url,
+      required String pageTitle,
+    }) async {
+      final Uri urlParsed = Uri.parse(url);
+
+      if (await canLaunchUrl(urlParsed)) {
+        await launchUrl(urlParsed, mode: LaunchMode.externalApplication);
+      } else {
+        print("error launching url");
+        Navigator.of(context).push(
+          MaterialPageRoute(
+              builder: (context) => WebViewBodyLoad(
+                    pageTitle: pageTitle,
+                    pageUrl: url,
+                    headerFooterRequired: true,
+                  )),
+        );
+      }
+    }
+
     return Drawer(
         child: Column(
       children: [
@@ -33,7 +56,7 @@ class SideMenu extends StatelessWidget {
                 ),
                 AreaInfoText(
                   title: "Age",
-                  text: "21",
+                  text: "22",
                 ),
                 SizedBox(
                   height: defaultPadding,
@@ -43,20 +66,22 @@ class SideMenu extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(vertical: defaultPadding),
                   child: Text(
                     "Knowledge",
-                    style: Theme.of(context).textTheme.subtitle2,
+                    style: Theme.of(context).textTheme.titleSmall,
                   ),
                 ),
                 TextButton(
                   onPressed: () {},
                   child: FittedBox(
                     child: Row(
-                      children:[
-                        Text("Download CV",style:TextStyle(
-                          color:Theme.of(context).textTheme.bodyText1!.color
+                      children: [
+                        Text(
+                          "Download CV",
+                          style: TextStyle(
+                              color:
+                                  Theme.of(context).textTheme.bodyLarge!.color),
                         ),
-                          ),
                         SizedBox(
-                          width:defaultPadding/2,
+                          width: defaultPadding / 2,
                         ),
                         Icon(
                           CupertinoIcons.arrow_down,
@@ -65,24 +90,49 @@ class SideMenu extends StatelessWidget {
                     ),
                   ),
                 ),
-                Container(
-                  margin:EdgeInsets.only(top:defaultPadding),
-                  color:Color(0xFF24242E),
-                  child:Row(
-                    children:[
-                      Spacer(),
-                      IconButton(onPressed: (){},
-                          icon:Image.network("assets/linkedin.png") ),
-                      IconButton(onPressed: (){},
-                          icon:Image.network("assets/fb.png") ),
-
-                      IconButton(onPressed: (){},
-                          icon:Image.network("assets/twitter.png") ),
-                      IconButton(onPressed: (){},
-                          icon:Image.network("assets/insta.jpeg") ),
-                      Spacer(),
-                    ]
-                  )
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Container(
+                      margin: EdgeInsets.only(top: defaultPadding),
+                      color: Color(0xFF24242E),
+                      child: Row(children: [
+                        IconButton(
+                            onPressed: () {
+                              // Navigator.pop(context);
+                              launchUrlSiteBrowser(
+                                  url:
+                                      'https://www.linkedin.com/in/sanskriti-mamgain-8b7ba1213/',
+                                  pageTitle: 'LinkedIn');
+                            },
+                            icon: Image.network(
+                              "assets/linkedin.png",
+                              height: 50,
+                            )),
+                        IconButton(
+                            onPressed: () {
+                              // Navigator.pop(context);
+                              launchUrlSiteBrowser(
+                                  url:
+                                  'https://www.instagram.com/',
+                                  pageTitle: 'Instagram');
+                            },
+                            icon: Image.network(
+                              "assets/instagram.png",
+                              height: 50,
+                            )),
+                        IconButton(
+                            onPressed: () {
+                              // Navigator.pop(context);
+                              launchUrlSiteBrowser(
+                                  url:
+                                  'https://github.com/sam6coder',
+                                  pageTitle: 'Github');
+                            },
+                            icon: Image.network(
+                              "assets/github.png",
+                              height: 50,
+                            )),
+                      ])),
                 ),
               ],
             ),

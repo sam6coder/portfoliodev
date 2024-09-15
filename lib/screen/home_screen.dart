@@ -33,11 +33,11 @@ class HomeScreen extends StatelessWidget {
                     Text(
                       "Hi, I am Sanskriti !",
                       style: Responsive.isDesktop(context)?
-                      Theme.of(context).textTheme.headline3!.copyWith(
+                      Theme.of(context).textTheme.displaySmall!.copyWith(
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
                           ):
-                      Theme.of(context).textTheme.headline5!.copyWith(
+                      Theme.of(context).textTheme.headlineSmall!.copyWith(
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ),
@@ -47,7 +47,7 @@ class HomeScreen extends StatelessWidget {
                         height: defaultPadding/2,
                       ),
                     DefaultTextStyle(
-                      style: Theme.of(context).textTheme.subtitle1!,
+                      style: Theme.of(context).textTheme.titleMedium!,
                       child: Row(
                         children: [
                           if(Responsive.isMobileLarge(context))
@@ -98,7 +98,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                         backgroundColor: primaryColor,
                       ),
-                      child: Text("EXPLORE NOW"),
+                      child: Text("EXPLORE NOW",style: TextStyle(color: Colors.white),),
                     ),
                   ],
                 ),

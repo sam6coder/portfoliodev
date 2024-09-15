@@ -24,10 +24,16 @@ class MyInfo extends StatelessWidget{
                   Text(
                     "Sanskriti Mamgain",
                     style:
-                    Theme.of(context).textTheme.subtitle2,
+                    Theme.of(context).textTheme.titleSmall,
                   ),
                   Text(
                     "Flutter Developer ",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w200,
+                        height: 1.5),
+                  ),
+                  Text(
+                    "Intern at KPMG",
                     style: TextStyle(
                         fontWeight: FontWeight.w200,
                         height: 1.5),
