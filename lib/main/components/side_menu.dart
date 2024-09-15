@@ -62,32 +62,14 @@ class SideMenu extends StatelessWidget {
                   height: defaultPadding,
                 ),
                 Coding(),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: defaultPadding),
-                  child: Text(
-                    "Knowledge",
-                    style: Theme.of(context).textTheme.titleSmall,
-                  ),
+                SizedBox(
+                  height: 20,
                 ),
-                TextButton(
-                  onPressed: () {},
-                  child: FittedBox(
-                    child: Row(
-                      children: [
-                        Text(
-                          "Download CV",
-                          style: TextStyle(
-                              color:
-                                  Theme.of(context).textTheme.bodyLarge!.color),
-                        ),
-                        SizedBox(
-                          width: defaultPadding / 2,
-                        ),
-                        Icon(
-                          CupertinoIcons.arrow_down,
-                        ),
-                      ],
-                    ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: defaultPadding/4),
+                  child: Text(
+                    "Connect with me",
+                    style: Theme.of(context).textTheme.titleMedium,
                   ),
                 ),
                 SingleChildScrollView(
