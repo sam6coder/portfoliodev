@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import dj_database_url
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -21,12 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-4tn+5a!x2-^eq8idgf+$ag#6wv*a96sb%s7%(x%osh&kr4le@n'
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
+# DEBUG = True
+DEBUG=os.environ.get("DEBUG","False").lower()=="true"
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
 
 
 # Application definition
@@ -82,8 +82,8 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
-DATABASES["default"]=dj_database_url.parse("postgresql://portfolio_pmbf_user:Cz7u7lyoOMEH4TlfjziggqSINZsVgmLK@dpg-ctghurd2ng1s738infmg-a.oregon-postgres.render.com/portfolio_pmbf")
+DATABASE_URL=os.environ.get["DATABASE_URL"]
+DATABASES["default"]=dj_database_url.parse(DATABASE_URL)
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
