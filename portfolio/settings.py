@@ -27,6 +27,9 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # DEBUG = True
 DEBUG=os.environ.get("DEBUG","False").lower()=="true"
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS","127.0.0.1").split(" ")
+CSRF_TRUSTED_ORIGINS = ['https://portfoliodev-backend.onrender.com']
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
 
 
 # Application definition
