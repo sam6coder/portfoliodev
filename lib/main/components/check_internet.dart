@@ -10,7 +10,7 @@ class CheckInternet {
   var contentmessage = "Unknown";
 
   checkConnection(BuildContext context) async {
-    listener = InternetConnectionChecker().onStatusChange.listen(
+    listener = InternetConnectionChecker.instance.onStatusChange.listen(
           (status) {
         switch (status) {
           case InternetConnectionStatus.connected:
@@ -42,7 +42,7 @@ class CheckInternet {
         }
       },
     );
-    return await InternetConnectionChecker().connectionStatus;
+    return await InternetConnectionChecker.instance.connectionStatus;
   }
 
   void showMyAlertDialog({
@@ -90,7 +90,7 @@ class CheckInternet {
   }
 
   Future<bool> checkInternetConnection(BuildContext context) async {
-    bool result = await InternetConnectionChecker().hasConnection;
+    bool result = await InternetConnectionChecker.instance.hasConnection;
     // if (result == true) {
     //   //print('YAY! Free cute dog pics!');
     //   internetStatus = "Connected to the Internet";

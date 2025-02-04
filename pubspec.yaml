@@ -19,7 +19,7 @@ dependencies:
   get: ^4.6.6
   webview_flutter: ^4.9.0
   webview_flutter_platform_interface: ^2.10.0
-  internet_connection_checker: ^2.0.0
+  internet_connection_checker: ^3.0.1
   url_launcher: ^6.3.0
 
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:portfoliodev/responsive.dart';
 import 'project_Card.dart';
 import 'package:portfoliodev/constants.dart';
@@ -11,6 +12,11 @@ class MyProjects extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+// print("desktop ${Responsive.isDesktop(context)}");
+// print("tablet ${Responsive.isTablet(context)}");
+// print("Mobile large ${Responsive.isMobileLarge(context)}");
+// print("Mobile ${Responsive.isMobile(context)}");
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -18,8 +24,8 @@ class MyProjects extends StatelessWidget {
           padding: const EdgeInsets.only(top:40),
           child: Center(
             child: Text(
-              "My Projects",
-              style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 40)
+                "My Projects",
+                style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 40)
             ),
           ),
         ),
@@ -27,11 +33,11 @@ class MyProjects extends StatelessWidget {
           height: defaultPadding,
         ),
         Responsive(mobile: ProjectGridView(crossAxisCount: 1,
-        childAspectRatio: 2,),
-            mobileLarge: ProjectGridView(crossAxisCount: 2,
+          childAspectRatio: 2,),
+            mobileLarge: ProjectGridView(crossAxisCount: 2,childAspectRatio: 1.8
             ),
-            tablet:ProjectGridView(childAspectRatio: 1.1,),
-            desktop: ProjectGridView()),
+            tablet:ProjectGridView(childAspectRatio: 1.7,crossAxisCount: 2),
+            desktop: ProjectGridView(crossAxisCount: 3,childAspectRatio: 1.0,)),
       ],
     );
   }
@@ -40,9 +46,9 @@ class MyProjects extends StatelessWidget {
 class ProjectGridView extends StatelessWidget{
   const ProjectGridView({
     Key? key,
-    this.crossAxisCount=3,
-    this.childAspectRatio=1.3,
-}): super(key:key);
+    required this.crossAxisCount,
+    required this.childAspectRatio
+  }): super(key:key);
 
   final int crossAxisCount;
   final double childAspectRatio;
