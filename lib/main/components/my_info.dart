@@ -10,7 +10,7 @@ class MyInfo extends StatelessWidget{
     return AspectRatio(
         aspectRatio: 1.23,
         child: Container(
-            color: Color(0xFF242430),
+            color: Color(0xFF124E66),
             child: Column(
                 mainAxisAlignment:
                 MainAxisAlignment.spaceAround,
@@ -21,19 +21,22 @@ class MyInfo extends StatelessWidget{
                     backgroundImage:
                     AssetImage("assets/profile.jpg"),
                   ),
+                  SizedBox(
+                    height: 10,
+                  ),
                   Text(
                     "Sanskriti Mamgain",
                     style:
                     Theme.of(context).textTheme.titleSmall,
                   ),
                   Text(
-                    "Flutter Developer ",
+                    "Flutter | Django | C++",
                     style: TextStyle(
                         fontWeight: FontWeight.w200,
                         height: 1.5),
                   ),
                   Text(
-                    "Intern at KPMG",
+                    "Analyst at KPMG",
                     style: TextStyle(
                         fontWeight: FontWeight.w200,
                         height: 1.5),
