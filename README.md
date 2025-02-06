@@ -4,4 +4,4 @@ My portfolio showcases a dynamic web and mobile application built using Flutter 
 It enlists about my education matter, working experience, projects , skills and contact information.
 
 
-![Uploading Screenshot 2025-02-06 at 4.00.23 PM.png…]()
+<img width="1470" alt="Screenshot 2025-02-06 at 4 00 23 PM" src="https://github.com/user-attachments/assets/55f413b0-4740-48de-9d3e-702de5bf0fd9" />
