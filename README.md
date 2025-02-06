@@ -8,7 +8,7 @@ It enlists about my education matter, working experience, projects , skills and 
 <img src="https://github.com/user-attachments/assets/05ce072e-47bd-465f-a53f-abda974c2362" width="800">
 <img src="https://github.com/user-attachments/assets/c5f05bb2-f167-4c28-8f24-5e7283a3d2f2" width="800">
 
-
 <img src="https://github.com/user-attachments/assets/4011e443-3f51-4232-97f6-26905eb83a45" width="250">
+<img src="https://github.com/user-attachments/assets/7f322620-74eb-49b9-85e8-8a9c5de0b73f" width="250">
 
 
