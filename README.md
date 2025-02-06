@@ -5,6 +5,6 @@ It enlists about my education matter, working experience, projects , skills and 
 
 
 <img src="https://github.com/user-attachments/assets/55f413b0-4740-48de-9d3e-702de5bf0fd9" width="1000">
-<img src="https://github.com/user-attachments/assets/4011e443-3f51-4232-97f6-26905eb83a45" width="1000">
+<img src="https://github.com/user-attachments/assets/4011e443-3f51-4232-97f6-26905eb83a45" width="250">
 
 
