@@ -5,5 +5,5 @@ It enlists about my education matter, working experience, projects , skills and 
 
 
 <img width="1000" alt="Screenshot 2025-02-06 at 4 00 23 PM" src="https://github.com/user-attachments/assets/55f413b0-4740-48de-9d3e-702de5bf0fd9" />
-![image](https://github.com/user-attachments/assets/71d1d6bc-61b6-47cc-951b-a10d28649b6c)
+![image](https://github.com/user-attachments/assets/4011e443-3f51-4232-97f6-26905eb83a45)
 
