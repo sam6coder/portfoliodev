@@ -1,5 +1,7 @@
-MY PORTFOLIO
+**MY PORTFOLIO
 
-Here is my portfolio describing my projects done so far , my personal contact information while you can connect with me through different social media handles. It enlists my skills that I have induced in different prokects. It also describes my working experience . I always update my portfolio with new projects , working experience and skills . Here are some screenshots :
+My portfolio showcases a dynamic web and mobile application built using Flutter for the frontend and Django for the backend. The project demonstrates my ability to create seamless, user-friendly interfaces with Flutter while leveraging Django’s robust backend capabilities for efficient data management and authentication. The mobile app provides a smooth and intuitive user experience, while the web application is fully responsive, ensuring accessibility across devices. With secure user authentication, database integration, and a clean, modern design, this portfolio reflects my expertise in creating scalable, high-performance applications that meet both user needs and business requirements.
+It enlists about my education matter, working experience, projects , skills and contact information.
+
 
 ![Uploading Screenshot 2025-02-06 at 4.00.23 PM.png…]()
