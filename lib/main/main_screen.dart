@@ -54,8 +54,9 @@ class MainScreen extends StatelessWidget {
                   _buildMenuItem('About', scrollAbout),
                   _buildMenuItem('Skills', scrollSkills),
                   _buildMenuItem('Projects', scrollProject),
-                  // _buildMenuItem('Contact', scrollContact),
-                  // _buildMenuItem('Experience', scrollExperience)
+                  _buildMenuItem('Experience', scrollExperience),
+                  _buildMenuItem('Contact', scrollContact),
+
                 ],
               ),
             )

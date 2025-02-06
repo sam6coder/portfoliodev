@@ -32,12 +32,14 @@ class MyInfo extends StatelessWidget{
                   Text(
                     "Flutter | Django | C++",
                     style: TextStyle(
+                      color: Colors.cyanAccent,
                         fontWeight: FontWeight.w200,
                         height: 1.5),
                   ),
                   Text(
-                    "Analyst at KPMG",
+                    "Analyst",
                     style: TextStyle(
+                      color: Colors.cyanAccent,
                         fontWeight: FontWeight.w200,
                         height: 1.5),
                   ),

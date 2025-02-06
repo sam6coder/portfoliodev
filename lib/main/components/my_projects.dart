@@ -25,7 +25,7 @@ class MyProjects extends StatelessWidget {
           child: Center(
             child: Text(
                 "MY PROJECTS",
-                style: TextStyle(color: Color(0xFFADEFD1),fontWeight: FontWeight.bold,fontSize: 50)
+                style: TextStyle(color: Color(0xFFADEFD1),fontWeight: FontWeight.bold,fontSize: (Responsive.isDesktop(context))?50:40)
             ),
           ),
         ),
@@ -33,7 +33,7 @@ class MyProjects extends StatelessWidget {
           height: defaultPadding,
         ),
         Responsive(mobile: ProjectGridView(crossAxisCount: 1,
-          childAspectRatio: 1.6,),
+          childAspectRatio: 1.4,),
             mobileLarge: ProjectGridView(crossAxisCount: 2,childAspectRatio: 1.8
             ),
             tablet:ProjectGridView(childAspectRatio: 1.7,crossAxisCount: 2),

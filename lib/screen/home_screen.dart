@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portfoliodev/constants.dart';
 import 'package:portfoliodev/main/components/about.dart';
+import 'package:portfoliodev/main/components/contact.dart';
+import 'package:portfoliodev/main/components/experience.dart';
 import 'package:portfoliodev/main/components/skills.dart';
 import 'package:portfoliodev/main/main_screen.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
@@ -163,38 +165,56 @@ class _HomeScreenState extends State<HomeScreen> {
                                       ],
                                     ),
                                   ),
-                                  ConstrainedBox(
-                                    constraints: BoxConstraints(
-                                      maxWidth:
-                                          MediaQuery.of(context).size.width *
-                                              0.6,
-                                    ),
-                                    child: Text(
-                                      "I build ",
-                                      style: (MediaQuery.of(context)
-                                                  .size
-                                                  .width >=
-                                              700)
-                                          ? TextStyle(
-                                              fontSize: MediaQuery.of(context)
-                                                      .size
-                                                      .width *
-                                                  0.016)
-                                          : TextStyle(
-                                              fontSize: MediaQuery.of(context)
-                                                      .size
-                                                      .width *
-                                                  0.03),
-                                      softWrap: true,
-                                      maxLines:
-                                          2, // Ensures text wraps to only 2 lines
-                                      overflow: TextOverflow.ellipsis,
-                                    ),
-                                  ),
+                                  // ConstrainedBox(
+                                  //   constraints: BoxConstraints(
+                                  //     maxWidth:
+                                  //         MediaQuery.of(context).size.width *
+                                  //             0.6,
+                                  //   ),
+                                  //   child: Text(
+                                  //     "I build ",
+                                  //     style: (MediaQuery.of(context)
+                                  //                 .size
+                                  //                 .width >=
+                                  //             700)
+                                  //         ? TextStyle(
+                                  //             fontSize: MediaQuery.of(context)
+                                  //                     .size
+                                  //                     .width *
+                                  //                 0.016)
+                                  //         : TextStyle(
+                                  //             fontSize: MediaQuery.of(context)
+                                  //                     .size
+                                  //                     .width *
+                                  //                 0.03),
+                                  //     softWrap: true,
+                                  //     maxLines:
+                                  //         2, // Ensures text wraps to only 2 lines
+                                  //     overflow: TextOverflow.ellipsis,
+                                  //   ),
+                                  // ),
                                   AnimatedTextKit(
                                     animatedTexts: [
                                       TyperAnimatedText(
-                                        "Responsive Application using Flutter and Django",
+                                        "I am an aspiring Application Developer",
+                                        textStyle: (MediaQuery.of(context)
+                                            .size
+                                            .width >=
+                                            700)
+                                            ? TextStyle(
+                                            fontSize: MediaQuery.of(context)
+                                                .size
+                                                .width *
+                                                0.016)
+                                            : TextStyle(
+                                            fontSize: MediaQuery.of(context)
+                                                .size
+                                                .width *
+                                                0.03),
+                                        speed: Duration(milliseconds: 60),
+                                      ),
+                                      TyperAnimatedText(
+                                        "I build Responsive Application using Flutter and Django",
                                         textStyle: (MediaQuery.of(context)
                                                     .size
                                                     .width >=
@@ -287,6 +307,9 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
         ),
+        SizedBox(
+          height: 20,
+        ),
         AboutScreen(
           key: aboutKey,
         ),
@@ -297,9 +320,25 @@ class _HomeScreenState extends State<HomeScreen> {
         SizedBox(
           height: 20,
         ),
+        ExperienceScreen(key: experienceKey,),
+        SizedBox(
+          height: 20,
+        ),
         MyProjects(
           key: projectKey,
         ),
+        SizedBox(
+          height: 20,
+        ),
+        ContactScreen(key: contactKey,),
+        SizedBox(
+          height: 100,
+        ),
+        Text('Designed and Developed by Sanskriti Mamgain',style: TextStyle(color: Colors.white,fontSize:(Responsive.isDesktop(context))?20:10),),
+        SizedBox(
+          height: 20,
+        )
+
       ],
     );
   }

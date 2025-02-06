@@ -35,7 +35,7 @@ class _SkillsScreemState extends State<SkillsScreem> {
             'SKILLS',
             style: TextStyle(
                 color: Color(0xFFADEFD1),
-                fontSize: 50,
+                fontSize: (Responsive.isDesktop(context))?50:40,
                 fontWeight: FontWeight.bold),
           ),
           SizedBox(
@@ -43,7 +43,7 @@ class _SkillsScreemState extends State<SkillsScreem> {
           ),
           // Image.network('assets/c++.png')
           Container(
-            width: MediaQuery.of(context).size.width*0.5,
+            width: (Responsive.isDesktop(context))?MediaQuery.of(context).size.width*0.5:MediaQuery.of(context).size.width*0.7,
             child: LayoutBuilder(
               builder: (context,constraints) {
                 return GridView.builder(
